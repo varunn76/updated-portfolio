@@ -3,7 +3,7 @@ import * as React from "react";
 const SvgIcon = ({ className, size }: { className?: string; size: string }) => (
   <svg
     fill="currentColor"
-    stroke-width="0"
+    strokeWidth="0"
     viewBox="0 0 512 512"
     height={size}
     width={size}

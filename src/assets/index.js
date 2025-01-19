@@ -5,9 +5,9 @@ import ArrowUpRightIcon from "./icons/arrow-up-right.svg";
 import bookImage from "./images/book-cover.png";
 import grainImage from "./images/grain.jpg";
 import memojiImage from "./images/memoji-computer.png";
-import darkSaasLandingPage from "./images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "./images/light-saas-landing-page.png";
-import aiStartupLandingPage from "./images/ai-startup-landing-page.png";
+import proj1 from "./images/proj1.png";
+import proj2 from "./images/proj2.png";
+import proj3 from "./images/proj3.png";
 import memojiAvatar1 from "./images/memoji-avatar-1.png";
 import memojiAvatar2 from "./images/memoji-avatar-2.png";
 import memojiAvatar3 from "./images/memoji-avatar-3.png";
@@ -23,9 +23,9 @@ export {
   grainImage,
   ArrowDown,
   memojiImage,
-  darkSaasLandingPage,
-  lightSaasLandingPage,
-  aiStartupLandingPage,
+  proj1,
+  proj2,
+  proj3,
   memojiAvatar1,
   memojiAvatar2,
   memojiAvatar3,

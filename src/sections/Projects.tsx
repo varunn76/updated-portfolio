@@ -1,7 +1,7 @@
 import {
-  darkSaasLandingPage,
-  lightSaasLandingPage,
-  aiStartupLandingPage,
+  proj1,
+  proj2,
+  proj3,
   CircleCheckIcon,
   ArrowUpRightIcon,
 } from "@/assets/index";
@@ -11,51 +11,39 @@ import Card from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    projectName: "Quick Watch",
+    year: "2024 - present",
+    title: "Online movie streaming platform",
+    results: [],
+    link: "https://quickwatch.vercel.app/",
+    image: proj1,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    projectName: "YC Directory",
+    year: "2024",
+    title: "Startup Idea Showcase Platform",
+    results: [],
+    link: "https://yc-directory-eight-zeta.vercel.app/",
+    image: proj2,
   },
-  {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
-  },
+  // {
+  //   projectName: "Spotify Downloader",
+  //   year: "2024",
+  //   title: "Spotify Song Downloader",
+  //   results: [],
+  //   link: "https://www.spotify-downloaders.com/",
+  //   image: proj3,
+  // },
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section className="pb-16 lg:py-24" id="project">
       <div className="container">
         <SectionHeaders
-          title={"Real-world Results"}
-          eyebrow="Featured Projects"
-          description="See how I transformed concepts into engaging didgital experiences."
+          title={"Portfolio Highlights"}
+          eyebrow="Recent Projects"
+          description="Turning ideas into successful and functional digital solutions."
         />
         <div className="flex flex-col mt-10 md:mt-20 gap-20">
           {portfolioProjects.map((project, index) => (
@@ -69,7 +57,7 @@ export const ProjectsSection = () => {
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
                   <div className="bg-gradient-to-r from-emerald-300 to-sky-400 gap-2 text-transparent bg-clip-text inline-flex uppercase font-bold text-sm tracking-widest">
-                    <span>{project.company}</span>
+                    <span>{project.projectName}</span>
                     <span>&bull;</span>
                     <span>{project.year}</span>
                   </div>
@@ -78,18 +66,19 @@ export const ProjectsSection = () => {
                     {project.title}
                   </h3>
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
-                  <ul className="flex flex-col gap-4 mt-4">
+                  <ul className="flex flex-col   gap-4 mt-4">
                     {project.results.map((result, index) => (
                       <li
                         key={index}
-                        className="flex gap-2 text-sm md:text-base text-white/50"
+                        className="flex gap-2 text-sm  md:text-base text-white/50"
                       >
-                        <CircleCheckIcon className="size-5 md:size-5" />
-                        <span>{result.title}</span>
+                        {/* <CircleCheckIcon className="size-5 md:size-5" /> */}
+                        <p className="font-bold">.</p>
+                        {/* <span className="text-sm">{result.title}</span> */}
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
+                  <a href={project.link} target="_blank">
                     <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 ">
                       <span>Visit Live Site</span>
                       <ArrowUpRightIcon className="size-4" />

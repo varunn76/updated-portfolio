@@ -10,7 +10,10 @@ const HeroSection = () => {
     console.log("Working....");
   };
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+    <section
+      id="home"
+      className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip"
+    >
       <div className="absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5"
@@ -55,34 +58,33 @@ const HeroSection = () => {
         </div>
         <div className="max-w-lg mx-auto text-center">
           <h1 className="font-serif text-3xl md:text-5xl mt-8 tracking-wide">
-            Building Exceptional User Experience
+            Varun Kumar
           </h1>
           <p className="mt-4 text-white/60 md:text-lg">
-            I specialize in transforming designs into functional,
-            high-performing web applications. Let's discuss your next project.
+            I&apos;m Full-Stack Developer
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
           <button
             type="button"
-            className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
+            className="inline-flex group items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
           >
             <span className="font-semibold">Explore My Work</span>
-            <ArrowRight className="size-4 hover:rotate-90 transition duration-75" />
+            <ArrowRight className="size-4 group-hover:rotate-90 transition-all duration-500" />
           </button>
           <button
             type="button"
             onClick={handleClick}
-            className="inline-flex items-center gap-2 border cursor-pointer border-white bg-white text-gray-900 px-6 h-12 rounded-xl"
+            className="inline-flex items-center gap-2 group border cursor-pointer border-white bg-white text-gray-900 px-6 h-12 rounded-xl"
           >
-            <span className="hover:-rotate-12 ease-in-out transition duration-200">
+            <span className="group-hover:-rotate-12  transitiona-all duration-500 group-hover:scale-150">
               👋
             </span>
-            <span className="font-semibold">Let's Connect</span>
+            <span className="font-semibold">Let&apos;s Connect</span>
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

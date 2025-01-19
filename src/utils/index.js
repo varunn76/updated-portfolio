@@ -3,11 +3,14 @@ import {
   GithubIcon,
   HTMLIcon,
   JavaScriptIcon,
+  TypeScriptIcon,
+  ReactNative,
   NextJsIcon,
   ReactIcon,
   CircleIcon,
   SparkleIcon,
   StarIcon,
+  TailwindcssIcon,
 } from "@/components/icons/index";
 export const ORBITSETTINGS = [
   {
@@ -85,6 +88,10 @@ export const TOOLBOXITEMS = [
     iconType: JavaScriptIcon,
   },
   {
+    title: "TypeScript",
+    iconType: TypeScriptIcon,
+  },
+  {
     title: "HTML5",
     iconType: HTMLIcon,
   },
@@ -101,6 +108,14 @@ export const TOOLBOXITEMS = [
     iconType: NextJsIcon,
   },
   {
+    title: "TailwindCss",
+    iconType: TailwindcssIcon,
+  },
+  {
+    title: "React Native/Expo",
+    iconType: ReactNative,
+  },
+  {
     title: "Github",
     iconType: GithubIcon,
   },
@@ -108,46 +123,46 @@ export const TOOLBOXITEMS = [
 
 export const HOBBIES = [
   {
-    title: "Painting",
-    emoji: "🎨",
+    title: "Table Tennins",
+    emoji: "🏓",
     left: "5%",
     top: "5%",
   },
   {
-    title: "Photograpghy",
-    emoji: "📸",
+    title: "Travel",
+    emoji: "🧳",
     left: "50%",
     top: "5%",
   },
 
+  // {
+  //   title: "Hiking",
+  //   emoji: "🥾",
+  //   left: "35%",
+  //   top: "40%",
+  // },
   {
-    title: "Hiking",
-    emoji: "🥾",
-    left: "35%",
-    top: "40%",
-  },
-  {
-    title: "Gaming",
-    emoji: "🎮",
+    title: "Manga/Manhwa",
+    emoji: "📚",
     left: "10%",
     top: "35%",
   },
   {
-    title: "Music",
-    emoji: "🎧",
+    title: "Video Editing",
+    emoji: "📷",
     left: "70%",
     top: "40%",
   },
-  {
-    title: "Fitness",
-    emoji: "🏋️‍♀️",
-    left: "5%",
-    top: "65%",
-  },
-  {
-    title: "Reading",
-    emoji: "📚",
-    left: "45%",
-    top: "70%",
-  },
+  // {
+  //   title: "Fitness",
+  //   emoji: "🏋️‍♀️",
+  //   left: "5%",
+  //   top: "65%",
+  // },
+  // {
+  //   title: "Reading",
+  //   emoji: "📚",
+  //   left: "45%",
+  //   top: "70%",
+  // },
 ];
