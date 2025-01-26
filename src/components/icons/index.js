@@ -10,6 +10,7 @@ import CircleIcon from "./CircleIcon";
 import ReactNative from "./ReactNative";
 import TypeScriptIcon from "./TypeScriptIcon";
 import TailwindcssIcon from "./TailwindcssIcon";
+import GSAP from "./GSAPIcon";
 
 export {
   JavaScriptIcon,
@@ -24,4 +25,5 @@ export {
   SparkleIcon,
   CircleIcon,
   TailwindcssIcon,
+  GSAP,
 };

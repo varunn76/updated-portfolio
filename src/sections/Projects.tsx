@@ -4,6 +4,7 @@ import {
   proj3,
   CircleCheckIcon,
   ArrowUpRightIcon,
+  proj4,
 } from "@/assets/index";
 import Image from "next/image";
 import SectionHeaders from "@/components/SectionHeaders";
@@ -14,26 +15,63 @@ const portfolioProjects = [
     projectName: "Quick Watch",
     year: "2024 - present",
     title: "Online movie streaming platform",
-    results: [],
+    results: [
+      { title: "An online movie and TV show streaming platform." },
+      {
+        title:
+          "Real-time movie and TV show data from TMDB API, with personalized recommendations and trending lists.",
+      },
+    ],
+    techStack: "Next Js, Tailwind CSS, Redux RTK, TanStack Query",
     link: "https://quickwatch.vercel.app/",
     image: proj1,
+  },
+  {
+    projectName: "Fitclub Gym CRM",
+    year: "2024 - present",
+    title: "CRM Dashboard",
+    results: [
+      {
+        title:
+          "Built a CRM system with features like employee and client management, attendance tracking,  invoice generation, and scheduling streamlining workflows and enhancing client experiences.",
+      },
+    ],
+    techStack: "React Js, Tailwind CSS, Node Js, Express Js, PostGresSQL, JWT",
+    link: "",
+    image: proj4,
   },
   {
     projectName: "YC Directory",
     year: "2024",
     title: "Startup Idea Showcase Platform",
-    results: [],
+    results: [
+      {
+        title:
+          "This project is an easy-to-use platform for submitting and exhibiting innovative startup ideas",
+      },
+      {
+        title: `Fetches and displays the latest startup ideas dynamically from Sanity’s Content API, ensuring that
+the homepage is always up to date with fresh content`,
+      },
+    ],
+    techStack: "Next.js, Tailwind CSS, Sanity, Auth.js",
     link: "https://yc-directory-eight-zeta.vercel.app/",
     image: proj2,
   },
-  // {
-  //   projectName: "Spotify Downloader",
-  //   year: "2024",
-  //   title: "Spotify Song Downloader",
-  //   results: [],
-  //   link: "https://www.spotify-downloaders.com/",
-  //   image: proj3,
-  // },
+  {
+    projectName: "Spotify Downloader",
+    year: "2024",
+    title: "Spotify Song Downloader",
+    results: [
+      {
+        title:
+          " Developed a web app to seamlessly download Spotify tracks using Next.js, providing a fast and user-friendly experience.",
+      },
+    ],
+    techStack: "Next Js, Tailwind CSS",
+    link: "https://www.spotify-downloaders.com/",
+    image: proj3,
+  },
 ];
 
 export const ProjectsSection = () => {
@@ -70,14 +108,17 @@ export const ProjectsSection = () => {
                     {project.results.map((result, index) => (
                       <li
                         key={index}
-                        className="flex gap-2 text-sm  md:text-base text-white/50"
+                        className="flex gap-2 text-sm w-full  md:text-base text-white/50"
                       >
-                        {/* <CircleCheckIcon className="size-5 md:size-5" /> */}
-                        <p className="font-bold">.</p>
-                        {/* <span className="text-sm">{result.title}</span> */}
+                        {/* <CircleCheckIcon className="size-5 " /> */}
+                        {/* <p className="font-bold flex items-start">.</p> */}
+                        <span className="text-sm">{result.title}</span>
                       </li>
                     ))}
                   </ul>
+                  <p className="text-[1rem] pt-4 text-gray-100">
+                    {project?.techStack}
+                  </p>
                   <a href={project.link} target="_blank">
                     <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 ">
                       <span>Visit Live Site</span>

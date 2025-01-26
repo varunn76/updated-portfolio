@@ -8,6 +8,7 @@ import memojiImage from "./images/memoji-computer.png";
 import proj1 from "./images/proj1.png";
 import proj2 from "./images/proj2.png";
 import proj3 from "./images/proj3.png";
+import proj4 from "./images/proj4.png";
 import memojiAvatar1 from "./images/memoji-avatar-1.png";
 import memojiAvatar2 from "./images/memoji-avatar-2.png";
 import memojiAvatar3 from "./images/memoji-avatar-3.png";
@@ -26,6 +27,7 @@ export {
   proj1,
   proj2,
   proj3,
+  proj4,
   memojiAvatar1,
   memojiAvatar2,
   memojiAvatar3,

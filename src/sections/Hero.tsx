@@ -5,6 +5,7 @@ import Image from "next/image";
 import { memojiImage, grainImage, ArrowDown, ArrowRight } from "@/assets/index";
 import HeroOrbit from "@/components/HeroOrbit";
 import { ORBITSETTINGS } from "@/utils/index";
+import Link from "next/link";
 const HeroSection = () => {
   const handleClick = () => {
     console.log("Working....");
@@ -65,13 +66,15 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button
-            type="button"
-            className="inline-flex group items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
-          >
-            <span className="font-semibold">Explore My Work</span>
-            <ArrowRight className="size-4 group-hover:rotate-90 transition-all duration-500" />
-          </button>
+          <Link href={`#project`}>
+            <button
+              type="button"
+              className="inline-flex group items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
+            >
+              <span className="font-semibold">Explore My Work</span>
+              <ArrowRight className="size-4 group-hover:rotate-90 transition-all duration-500" />
+            </button>
+          </Link>
           <button
             type="button"
             onClick={handleClick}

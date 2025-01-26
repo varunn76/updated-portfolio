@@ -20,7 +20,7 @@ const AboutSection = () => {
         />
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-            <Card className="h-[320px] md:col-span-2 lg:col-span-1">
+            {/* <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
                 title="My Reads"
                 description="Explore the books shaping my perspectives."
@@ -28,8 +28,8 @@ const AboutSection = () => {
               <div className="w-40 mx-auto mt-2 md:mt-0">
                 <Image src={bookImage} alt="book cover" />
               </div>
-            </Card>
-            <Card className="h-[320px]  md:col-span-3 lg:col-span-2">
+            </Card> */}
+            <Card className="h-[320px]  col-span-full">
               <CardHeader
                 title="My Toolbox"
                 description="Explore the technology and tools I use to craft exceptional

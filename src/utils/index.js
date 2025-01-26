@@ -11,6 +11,7 @@ import {
   SparkleIcon,
   StarIcon,
   TailwindcssIcon,
+  GSAP,
 } from "@/components/icons/index";
 export const ORBITSETTINGS = [
   {
@@ -110,6 +111,10 @@ export const TOOLBOXITEMS = [
   {
     title: "TailwindCss",
     iconType: TailwindcssIcon,
+  },
+  {
+    title: "GSAP",
+    iconType: GSAP,
   },
   {
     title: "React Native/Expo",
