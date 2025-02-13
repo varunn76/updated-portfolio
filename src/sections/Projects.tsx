@@ -22,7 +22,7 @@ const portfolioProjects = [
           "Real-time movie and TV show data from TMDB API, with personalized recommendations and trending lists.",
       },
     ],
-    techStack: "Next Js, Tailwind CSS, Redux RTK, TanStack Query",
+    techStack: "Next Js, Tailwind CSS, Redux RTK, TanStack Query, MongoDB",
     link: "https://quickwatch.vercel.app/",
     image: proj1,
   },
@@ -58,20 +58,20 @@ the homepage is always up to date with fresh content`,
     link: "https://yc-directory-eight-zeta.vercel.app/",
     image: proj2,
   },
-  {
-    projectName: "Spotify Downloader",
-    year: "2024",
-    title: "Spotify Song Downloader",
-    results: [
-      {
-        title:
-          " Developed a web app to seamlessly download Spotify tracks using Next.js, providing a fast and user-friendly experience.",
-      },
-    ],
-    techStack: "Next Js, Tailwind CSS",
-    link: "https://www.spotify-downloaders.com/",
-    image: proj3,
-  },
+  // {
+  //   projectName: "Spotify Downloader",
+  //   year: "2024",
+  //   title: "Spotify Song Downloader",
+  //   results: [
+  //     {
+  //       title:
+  //         " Developed a web app to seamlessly download Spotify tracks using Next.js, providing a fast and user-friendly experience.",
+  //     },
+  //   ],
+  //   techStack: "Next Js, Tailwind CSS",
+  //   link: "https://www.spotify-downloaders.com/",
+  //   image: proj3,
+  // },
 ];
 
 export const ProjectsSection = () => {

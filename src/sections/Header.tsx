@@ -1,3 +1,5 @@
+const resumeUrl = "/varunCV.pdf";
+
 export const Header = () => {
   return (
     <div className="flex items-center justify-center fixed top-3 w-full z-10">
@@ -15,8 +17,10 @@ export const Header = () => {
           Contact
         </a>
         <a
-          href="#"
+          href={resumeUrl}
           className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900"
+          target="_blank" // Opens in a new tab
+          rel="noopener noreferrer"
         >
           Resume
         </a>

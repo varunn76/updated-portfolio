@@ -75,16 +75,17 @@ const HeroSection = () => {
               <ArrowRight className="size-4 group-hover:rotate-90 transition-all duration-500" />
             </button>
           </Link>
-          <button
-            type="button"
-            onClick={handleClick}
-            className="inline-flex items-center gap-2 group border cursor-pointer border-white bg-white text-gray-900 px-6 h-12 rounded-xl"
-          >
-            <span className="group-hover:-rotate-12  transitiona-all duration-500 group-hover:scale-150">
-              👋
-            </span>
-            <span className="font-semibold">Let&apos;s Connect</span>
-          </button>
+          <a href="mailto:varunnkumar4@gmail.com">
+            <button
+              type="button"
+              className="inline-flex items-center gap-2 group border cursor-pointer border-white bg-white text-gray-900 px-6 h-12 rounded-xl"
+            >
+              <span className="group-hover:-rotate-12  transitiona-all duration-500 group-hover:scale-150">
+                👋
+              </span>
+              <span className="font-semibold">Let&apos;s Connect</span>
+            </button>
+          </a>
         </div>
       </div>
     </section>
