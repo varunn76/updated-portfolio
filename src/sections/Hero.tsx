@@ -62,7 +62,7 @@ const HeroSection = () => {
             Varun Kumar
           </h1>
           <p className="mt-4 text-white/60 md:text-lg">
-            I&apos;m Full-Stack Developer
+            I&apos;m Front End Developer
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
