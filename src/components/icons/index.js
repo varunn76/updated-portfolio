@@ -11,6 +11,7 @@ import ReactNative from "./ReactNative";
 import TypeScriptIcon from "./TypeScriptIcon";
 import TailwindcssIcon from "./TailwindcssIcon";
 import GSAP from "./GSAPIcon";
+import MenuIcon from "./MenuIcon";
 
 export {
   JavaScriptIcon,
@@ -26,4 +27,5 @@ export {
   CircleIcon,
   TailwindcssIcon,
   GSAP,
+  MenuIcon,
 };
