@@ -2,6 +2,7 @@ import {
   proj1,
   proj2,
   proj3,
+  proj5,
   CircleCheckIcon,
   ArrowUpRightIcon,
   proj4,
@@ -12,65 +13,83 @@ import Card from "@/components/Card";
 
 const portfolioProjects = [
   {
+    projectName: "The Thai Tourism",
+    year: "2024 - 2025",
+    title: "Thailand Travel Booking Web Application",
+    results: [
+      {
+        title:
+          "Developed a travel booking web application for tourism services.",
+      },
+      { title: "Implemented search, listings, and booking-ready UI flows." },
+    ],
+
+    techStack: "Next Js, Tailwind CSS, Redux RTK, TanStack Query, shadcn/ui, Stripe",
+    link: "https://travel-user.accessdashboard.live/",
+    image: proj5,
+    disable: false,
+  },
+  {
     projectName: "Quick Watch",
     year: "2024 - present",
     title: "Online movie streaming platform",
     results: [
-      { title: "An online movie and TV show streaming platform." },
       {
         title:
-          "Real-time movie and TV show data from TMDB API, with personalized recommendations and trending lists.",
+          "Built a Netflix-like movie & TV streaming platform using TMDB API.",
+      },
+      {
+        title:
+          "Implemented real-time data fetching, trending lists, and personalized recommendations.",
+      },
+      {
+        title: "Optimized state management with Redux RTK and TanStack Query.",
       },
     ],
+
     techStack: "Next Js, Tailwind CSS, Redux RTK, TanStack Query, MongoDB",
-    link: "https://quickwatch.vercel.app/",
+    link: "https://quickwatch.vercel.app/home",
     image: proj1,
+    disable: false,
   },
   {
     projectName: "Fitclub Gym CRM",
-    year: "2024 - present",
+    year: "2024 - 2025",
     title: "CRM Dashboard",
     results: [
       {
         title:
-          "Built a CRM system with features like employee and client management, attendance tracking,  invoice generation, and scheduling streamlining workflows and enhancing client experiences.",
+          "Developed a full-featured CRM for gym operations and client management.",
       },
+      {
+        title:
+          "Implemented attendance tracking, invoicing, and role-based access.",
+      },
+      { title: "Improved workflow efficiency for staff and trainers." },
     ],
+
     techStack: "React Js, Tailwind CSS, Node Js, Express Js, PostGresSQL, JWT",
     link: "",
     image: proj4,
-  },
-  {
-    projectName: "YC Directory",
-    year: "2024",
-    title: "Startup Idea Showcase Platform",
-    results: [
-      {
-        title:
-          "This project is an easy-to-use platform for submitting and exhibiting innovative startup ideas",
-      },
-      {
-        title: `Fetches and displays the latest startup ideas dynamically from Sanity’s Content API, ensuring that
-the homepage is always up to date with fresh content`,
-      },
-    ],
-    techStack: "Next.js, Tailwind CSS, Sanity, Auth.js",
-    link: "https://yc-directory-eight-zeta.vercel.app/",
-    image: proj2,
+    disable: true,
   },
   // {
-  //   projectName: "Spotify Downloader",
+  //   projectName: "YC Directory",
   //   year: "2024",
-  //   title: "Spotify Song Downloader",
+  //   title: "Startup Idea Showcase Platform",
   //   results: [
   //     {
   //       title:
-  //         " Developed a web app to seamlessly download Spotify tracks using Next.js, providing a fast and user-friendly experience.",
+  //         "Built a startup idea showcase platform with dynamic content updates.",
   //     },
+  //     { title: "Integrated Sanity CMS for real-time content management." },
+  //     { title: "Implemented authentication and protected routes." },
   //   ],
-  //   techStack: "Next Js, Tailwind CSS",
-  //   link: "https://www.spotify-downloaders.com/",
-  //   image: proj3,
+
+  //   techStack: "Next.js, Tailwind CSS, Sanity, Auth.js",
+  //   link: "https://yc-directory-eight-zeta.vercel.app/",
+  //   image: proj2,
+  //   disable: false,
   // },
 ];
 
@@ -104,7 +123,7 @@ export const ProjectsSection = () => {
                     {project.title}
                   </h3>
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
-                  <ul className="flex flex-col   gap-4 mt-4">
+                  <ul className="flex flex-col gap-3 leading-relaxed mt-4">
                     {project.results.map((result, index) => (
                       <li
                         key={index}
@@ -120,7 +139,10 @@ export const ProjectsSection = () => {
                     {project?.techStack}
                   </p>
                   <a href={project.link} target="_blank">
-                    <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 ">
+                    <button
+                      disabled={project.disable}
+                      className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 "
+                    >
                       <span>Visit Live Site</span>
                       <ArrowUpRightIcon className="size-4" />
                     </button>
@@ -141,16 +163,3 @@ export const ProjectsSection = () => {
     </section>
   );
 };
-{
-  /* <div className="flex justify-center">
-<p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400  text-center text-transparent bg-clip-text">
-  Real-world Results
-</p>
-</div>
-<h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
-Featured Projects
-</h2>
-<p className="text-center md:text-lg lg:text-xl mt-4 max-w-md mx-auto text-white/60">
-See how I transformed concepts into engaging didgital experiences.
-</p> */
-}
