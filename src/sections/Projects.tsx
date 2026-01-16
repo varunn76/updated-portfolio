@@ -1,9 +1,6 @@
 import {
   proj1,
-  proj2,
-  proj3,
   proj5,
-  CircleCheckIcon,
   ArrowUpRightIcon,
   proj4,
 } from "@/assets/index";
@@ -27,7 +24,7 @@ const portfolioProjects = [
     techStack: "Next Js, Tailwind CSS, Redux RTK, TanStack Query, shadcn/ui, Stripe",
     link: "https://travel-user.accessdashboard.live/",
     image: proj5,
-    disable: false,
+    disable:true,
   },
   {
     projectName: "Quick Watch",
@@ -50,7 +47,7 @@ const portfolioProjects = [
     techStack: "Next Js, Tailwind CSS, Redux RTK, TanStack Query, MongoDB",
     link: "https://quickwatch.vercel.app/home",
     image: proj1,
-    disable: false,
+     disable:false,
   },
   {
     projectName: "Fitclub Gym CRM",
@@ -71,7 +68,7 @@ const portfolioProjects = [
     techStack: "React Js, Tailwind CSS, Node Js, Express Js, PostGresSQL, JWT",
     link: "",
     image: proj4,
-    disable: true,
+    disable:true,
   },
   // {
   //   projectName: "YC Directory",
