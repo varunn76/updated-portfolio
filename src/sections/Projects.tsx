@@ -22,7 +22,7 @@ const portfolioProjects = [
     ],
 
     techStack: "Next Js, Tailwind CSS, Redux RTK, TanStack Query, shadcn/ui, Stripe",
-    link: "https://travel-user.accessdashboard.live/",
+    link: "",
     image: proj5,
     disable:true,
   },
