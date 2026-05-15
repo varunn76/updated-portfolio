@@ -18,68 +18,76 @@ export const ORBITSETTINGS = [
     size: 430,
     rotation: -14,
     orbitDuration: "30s",
-    SpinDuration: "3s",
-    icon: <SparkleIcon className="size-8 text-emerald-300/20" size="2rem" />,
+    spinDuration: "3s",
+    icon: <SparkleIcon className="size-8 text-cyber-emerald/60" size="2rem" />,
   },
   {
     size: 440,
     rotation: 79,
     orbitDuration: "32s",
-    SpinDuration: "3s",
-    icon: <SparkleIcon className="size-5 text-emerald-300/20" size="1.25rem" />,
+    spinDuration: "3s",
+    icon: (
+      <SparkleIcon className="size-5 text-cyber-emerald/40" size="1.25rem" />
+    ),
   },
   {
     size: 520,
     rotation: -41,
     orbitDuration: "34s",
-    icon: <CircleIcon className="size-2 text-emerald-300/20" size="0.5rem" />,
+    icon: <CircleIcon className="size-2 text-cyber-sky/60" size="0.5rem" />,
   },
   {
     size: 530,
     rotation: 178,
     orbitDuration: "36s",
-    SpinDuration: "3s",
-    icon: <SparkleIcon className="size-10 text-emerald-300/20" size="2.5rem" />,
+    spinDuration: "3s",
+    icon: (
+      <SparkleIcon className="size-10 text-cyber-emerald/50" size="2.5rem" />
+    ),
   },
   {
     size: 550,
     rotation: 20,
     orbitDuration: "38s",
-    SpinDuration: "6s",
-    icon: <StarIcon className="size-12 text-emerald-300" size="3rem" />,
+    spinDuration: "6s",
+    icon: <StarIcon className="size-12 text-cyber-emerald/80" size="3rem" />,
   },
   {
     size: 590,
     rotation: 98,
     orbitDuration: "40s",
-    SpinDuration: "6s",
-    icon: <StarIcon className="size-8 text-emerald-300" size="2rem" />,
+    spinDuration: "6s",
+    icon: <StarIcon className="size-8 text-cyber-sky/80" size="2rem" />,
   },
   {
     size: 650,
     rotation: -5,
     orbitDuration: "42s",
-    icon: <CircleIcon className="size-3 text-emerald-300/20" size="0.75rem" />,
+    icon: (
+      <CircleIcon className="size-3 text-cyber-emerald/40" size="0.75rem" />
+    ),
   },
   {
     size: 710,
     rotation: 144,
     orbitDuration: "44s",
-    SpinDuration: "3s",
-    icon: <SparkleIcon className="size-14 text-emerald-300/20" size="3.5rem" />,
+    spinDuration: "3s",
+    icon: <SparkleIcon className="size-14 text-cyber-sky/60" size="3.5rem" />,
   },
   {
     size: 720,
     rotation: 85,
     orbitDuration: "46s",
-    icon: <CircleIcon className="size-3 text-emerald-300/20" size="0.75rem" />,
+    icon: (
+      <CircleIcon className="size-3 text-cyber-emerald/50" size="0.75rem" />
+    ),
   },
   {
     size: 800,
     rotation: -72,
     orbitDuration: "48s",
-    SpinDuration: "6s",
-    icon: <StarIcon className="size-28 text-emerald-300" size="7rem" />,
+    spinDuration: "6s",
+    icon: <StarIcon className="size-28 text-cyber-emerald" size="7rem" />,
   },
 ];
 
@@ -140,12 +148,12 @@ export const HOBBIES = [
     top: "5%",
   },
 
-  // {
-  //   title: "Hiking",
-  //   emoji: "🥾",
-  //   left: "35%",
-  //   top: "40%",
-  // },
+  {
+    title: "Movies",
+    emoji: "🎬",
+    left: "35%",
+    top: "40%",
+  },
   {
     title: "Manga/Manhwa",
     emoji: "📚",

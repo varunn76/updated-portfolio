@@ -13,7 +13,7 @@ const FOOTERLINKS = [
   },
   {
     title: "Twitter",
-    href: "https://x.com/varunn_yt",
+    href: "https://x.com/varunnkumarrr",
   },
 ];
 

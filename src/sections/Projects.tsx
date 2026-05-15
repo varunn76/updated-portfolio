@@ -1,14 +1,32 @@
-import {
-  proj1,
-  proj5,
-  ArrowUpRightIcon,
-  proj4,
-} from "@/assets/index";
+import { proj1, proj5, ArrowUpRightIcon, proj4, proj2 } from "@/assets/index";
 import Image from "next/image";
 import SectionHeaders from "@/components/SectionHeaders";
 import Card from "@/components/Card";
 
 const portfolioProjects = [
+  {
+    projectName: "Halfway",
+    year: "2025",
+    title: "Fair Meeting Place Finder Web Application",
+    results: [
+      {
+        title:
+          "Built a web app that helps users find fair meeting places between multiple locations.",
+      },
+      {
+        title:
+          "Implemented map-based search, vibe filters, and distance balancing logic for smarter meetup decisions.",
+      },
+      {
+        title:
+          "Designed a clean, mobile-first UI focused on fast decision-making and real-world usability.",
+      },
+    ],
+    techStack: "Next.js, TypeScript, Tailwind CSS v4, OpenStreetMap, shadcn/ui",
+    link: "https://halfwayy.vercel.app/",
+    image: proj2,
+    disable: false,
+  },
   {
     projectName: "The Thai Tourism",
     year: "2024 - 2025",
@@ -18,17 +36,19 @@ const portfolioProjects = [
         title:
           "Developed a travel booking web application for tourism services.",
       },
-      { title: "Implemented search, listings, and booking-ready UI flows." },
+      {
+        title: "Implemented search, listings, and booking-ready UI flows.",
+      },
     ],
-
-    techStack: "Next Js, Tailwind CSS, Redux RTK, TanStack Query, shadcn/ui, Stripe",
+    techStack:
+      "Next Js, Tailwind CSS, Redux RTK, TanStack Query, shadcn/ui, Stripe, Typescript,",
     link: "",
     image: proj5,
-    disable:true,
+    disable: true,
   },
   {
     projectName: "Quick Watch",
-    year: "2024 - present",
+    year: "2024 - 2025",
     title: "Online movie streaming platform",
     results: [
       {
@@ -43,11 +63,11 @@ const portfolioProjects = [
         title: "Optimized state management with Redux RTK and TanStack Query.",
       },
     ],
-
-    techStack: "Next Js, Tailwind CSS, Redux RTK, TanStack Query, MongoDB",
+    techStack:
+      "Next Js, Tailwind CSS, Redux RTK, TanStack Query, MongoDB, Typescript",
     link: "https://quickwatch.vercel.app/home",
     image: proj1,
-     disable:false,
+    disable: false,
   },
   {
     projectName: "Fitclub Gym CRM",
@@ -62,32 +82,15 @@ const portfolioProjects = [
         title:
           "Implemented attendance tracking, invoicing, and role-based access.",
       },
-      { title: "Improved workflow efficiency for staff and trainers." },
+      {
+        title: "Improved workflow efficiency for staff and trainers.",
+      },
     ],
-
     techStack: "React Js, Tailwind CSS, Node Js, Express Js, PostGresSQL, JWT",
     link: "",
     image: proj4,
-    disable:true,
+    disable: true,
   },
-  // {
-  //   projectName: "YC Directory",
-  //   year: "2024",
-  //   title: "Startup Idea Showcase Platform",
-  //   results: [
-  //     {
-  //       title:
-  //         "Built a startup idea showcase platform with dynamic content updates.",
-  //     },
-  //     { title: "Integrated Sanity CMS for real-time content management." },
-  //     { title: "Implemented authentication and protected routes." },
-  //   ],
-
-  //   techStack: "Next.js, Tailwind CSS, Sanity, Auth.js",
-  //   link: "https://yc-directory-eight-zeta.vercel.app/",
-  //   image: proj2,
-  //   disable: false,
-  // },
 ];
 
 export const ProjectsSection = () => {
@@ -95,62 +98,105 @@ export const ProjectsSection = () => {
     <section className="pb-16 lg:py-24" id="project">
       <div className="container">
         <SectionHeaders
-          title={"Portfolio Highlights"}
+          title="Portfolio Highlights"
           eyebrow="Recent Projects"
           description="Turning ideas into successful and functional digital solutions."
         />
-        <div className="flex flex-col mt-10 md:mt-20 gap-20">
+
+        <div className="flex flex-col mt-10 md:mt-16 gap-16">
           {portfolioProjects.map((project, index) => (
             <Card
               key={project.title}
-              className="px-8 pt-8 pb-0 md:pt-12 lg:pt-16  lg:px-20 md:px-10 sticky top-16"
+              className="group/card sticky top-16 overflow-hidden px-5 pt-5 pb-0 md:px-8 md:pt-8 lg:px-12 lg:pt-12 border border-white/10 bg-white/[0.03] backdrop-blur-xl shadow-[0_30px_120px_rgba(0,0,0,0.35)]"
               style={{
                 top: `calc(64px + ${index * 40}px)`,
               }}
             >
-              <div className="lg:grid lg:grid-cols-2 lg:gap-16">
-                <div className="lg:pb-16">
-                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 gap-2 text-transparent bg-clip-text inline-flex uppercase font-bold text-sm tracking-widest">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(110,231,183,0.16),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(56,189,248,0.16),transparent_30%)]" />
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+
+              <div className="relative lg:grid lg:grid-cols-2 lg:gap-12">
+                <div className="lg:pb-12">
+                  <div className="mb-4 hidden md:inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
+                    <span className="flex size-7 items-center justify-center rounded-full bg-white text-gray-950 tracking-normal">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
                     <span>{project.projectName}</span>
-                    <span>&bull;</span>
+                    <span className="size-1 rounded-full bg-emerald-300" />
                     <span>{project.year}</span>
                   </div>
 
-                  <h3 className="font-serif text-2xl md:text-4xl mt-2 md:mt-5">
+                  <h3 className="font-serif text-2xl md:text-4xl leading-tight">
                     {project.title}
                   </h3>
-                  <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
-                  <ul className="flex flex-col gap-3 leading-relaxed mt-4">
-                    {project.results.map((result, index) => (
+
+                  <div className="mt-4 hidden md:block h-px w-full bg-gradient-to-r from-white/20 via-white/5 to-transparent" />
+
+                  <ul className="mt-5 hidden md:flex flex-col gap-3">
+                    {project.results.map((result, resultIndex) => (
                       <li
-                        key={index}
-                        className="flex gap-2 text-sm w-full  md:text-base text-white/50"
+                        key={resultIndex}
+                        className="flex gap-3 text-sm leading-relaxed text-white/60 md:text-base"
                       >
-                        {/* <CircleCheckIcon className="size-5 " /> */}
-                        {/* <p className="font-bold flex items-start">.</p> */}
-                        <span className="text-sm">{result.title}</span>
+                        <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 shadow-[0_0_20px_rgba(56,189,248,0.55)]" />
+                        <span>{result.title}</span>
                       </li>
                     ))}
                   </ul>
-                  <p className="text-[1rem] pt-4 text-gray-100">
-                    {project?.techStack}
-                  </p>
-                  <a href={project.link} target="_blank">
-                    <button
-                      disabled={project.disable}
-                      className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 "
-                    >
-                      <span>Visit Live Site</span>
-                      <ArrowUpRightIcon className="size-4" />
-                    </button>
-                  </a>
+
+                  <div className="mt-6 hidden md:flex flex-wrap gap-2">
+                    {project.techStack.split(",").map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-medium text-white/70"
+                      >
+                        {tech.trim()}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-8 flex md:block">
+                    {project.disable ? (
+                      <button
+                        disabled
+                        className="h-11 w-full cursor-not-allowed rounded-xl border border-white/10 bg-white/10 px-6 text-sm font-semibold text-white/40 md:w-auto"
+                      >
+                        Private Project
+                      </button>
+                    ) : (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-white px-6 text-sm font-semibold text-gray-950 transition hover:-translate-y-0.5 hover:bg-white/90 md:w-auto"
+                      >
+                        <span>Visit Live Site</span>
+                        <ArrowUpRightIcon className="size-4" />
+                      </a>
+                    )}
+                  </div>
                 </div>
-                <div className="relative">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
-                  />
+
+                <div className="relative mt-10 min-h-[200px] md:min-h-[340px] lg:mt-0 lg:min-h-[420px]">
+                  <div className="absolute inset-x-8 top-12 h-40 rounded-full bg-sky-400/20 blur-3xl transition duration-500 group-hover/card:bg-emerald-300/20" />
+
+                  <div className="relative overflow-hidden rounded-t-[2rem] border border-white/10 bg-gray-950/80 shadow-2xl ring-1 ring-white/10 transition duration-500 group-hover/card:-translate-y-2 group-hover/card:rotate-[-1deg] lg:absolute lg:bottom-0 lg:left-0 lg:w-[720px]">
+                    <div className="flex h-9 items-center gap-2 border-b border-white/10 bg-white/[0.04] px-4">
+                      <span className="size-2.5 rounded-full bg-red-400/80" />
+                      <span className="size-2.5 rounded-full bg-yellow-400/80" />
+                      <span className="size-2.5 rounded-full bg-emerald-400/80" />
+
+                      <div className="ml-3 hidden h-4 flex-1 rounded-full bg-white/[0.06] md:block" />
+                    </div>
+
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      className="h-auto w-full object-cover object-left-top transition duration-700 group-hover/card:scale-[1.03]"
+                    />
+
+                    <div className="pointer-events-none absolute inset-0  bg-gradient-to-b from-gray-950/40 via-transparent to-transparent" />
+                  </div>
                 </div>
               </div>
             </Card>
