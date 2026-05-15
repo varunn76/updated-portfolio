@@ -14,14 +14,14 @@ const ToolBoxItems = ({
   return (
     <div
       className={twMerge(
-        "flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]",
-        className
+        "flex [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]",
+        className,
       )}
     >
       <div
         className={twMerge(
-          "flex flex-none py-0.5 gap-6 pr-6",
-          itemsWrapperClassName
+          "flex flex-none py-2 gap-6 pr-6",
+          itemsWrapperClassName,
         )}
       >
         {[
@@ -30,10 +30,14 @@ const ToolBoxItems = ({
               {items.map((item) => (
                 <div
                   key={item.title}
-                  className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg"
+                  className="inline-flex items-center gap-4 py-2.5 px-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-500 group cursor-default"
                 >
-                  <TechIcon component={item.iconType} />
-                  <span className="font-semibold">{item.title}</span>
+                  <div className="group-hover:scale-110 transition-transform duration-300">
+                    <TechIcon component={item.iconType} />
+                  </div>
+                  <span className="font-bold text-sm tracking-tight text-white/80 group-hover:text-white transition-colors duration-300">
+                    {item.title}
+                  </span>
                 </div>
               ))}
             </Fragment>
