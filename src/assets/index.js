@@ -11,6 +11,7 @@ import proj3 from "./images/proj3.png";
 import proj4 from "./images/proj4.png";
 // import proj5 from "./images/proj5.png";
 import proj5 from "./images/thethai.png";
+import spendwizze from "./images/spendwizze.png";
 import memojiAvatar1 from "./images/memoji-avatar-1.png";
 import memojiAvatar2 from "./images/memoji-avatar-2.png";
 import memojiAvatar3 from "./images/memoji-avatar-3.png";
@@ -31,6 +32,7 @@ export {
   proj3,
   proj4,
   proj5,
+  spendwizze,
   memojiAvatar1,
   memojiAvatar2,
   memojiAvatar3,

@@ -153,18 +153,23 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="flex items-center gap-3 px-4 py-2 rounded-full bg-cyber-gray/60 backdrop-blur-xl border border-white/10 mb-10 shadow-lg relative group overflow-hidden"
+            className="mb-10"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-
-            <div className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyber-emerald opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyber-emerald shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>
-            </div>
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70">
-              System Active <span className="text-white/20 mx-1">•</span>{" "}
-              <span className="text-cyber-emerald">Available for Work</span>
-            </span>
+            <Link
+              href="#contact"
+              className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 backdrop-blur-sm hover:border-white/20 hover:bg-white/[0.07] transition-colors"
+            >
+              <span className="relative flex size-2">
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex size-2 rounded-full bg-emerald-400" />
+              </span>
+              <span className="text-xs font-medium text-white/70">
+                System Active <span className="text-white/20 mx-1">•</span>{" "}
+                <span className="text-emerald-400 font-semibold">
+                  Available for Work
+                </span>
+              </span>
+            </Link>
           </motion.div>
 
           <AnimatedTitle
@@ -198,7 +203,6 @@ const HeroSection = () => {
           >
             <Link href="#project">
               <MagneticButton className="relative bg-cyber-emerald text-cyber-black flex items-center gap-2 group overflow-hidden shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]">
-   
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-shimmer" />
 
                 <span className="relative z-10 flex items-center gap-2">
